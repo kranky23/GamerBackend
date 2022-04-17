@@ -1,22 +1,14 @@
 package com.example.gamerbackend.Controller;
 
-//import com.example.gamerbackend.Response.AllDetails;
-import com.example.gamerbackend.Response.Appid;
-import com.example.gamerbackend.Response.GameResponse;
-import com.fasterxml.jackson.databind.util.JSONPObject;
-import org.apache.tomcat.util.json.JSONParser;
 import org.json.JSONException;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-import org.json.JSONObject;
+
 import java.util.LinkedHashMap;
 
-import javax.xml.crypto.Data;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,7 +16,6 @@ import java.util.List;
 @CrossOrigin(origins ="http://localhost:4200")
 public class GameController {
 
-    Appid appClass;
     @GetMapping(value = "/games")
     private List<Object> getGames()
     {

@@ -43,21 +43,19 @@ public class JwtController {
         System.out.println("Obtained request is " + jwtRequest.getEmail());
         try
         {
-            System.out.println("Proceeding to check the login details 2");
             this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(jwtRequest.getEmail(), jwtRequest.getPassword()));
-            System.out.println("Proceeding to check the login details 3");
+
         }catch(UsernameNotFoundException e){
             e.printStackTrace();
-            System.out.println("Proceeding to check the login details 1");
+
             throw new Exception("Bad Credentials - username not found");
         }catch(BadCredentialsException e){
             e.printStackTrace();
-            System.out.println("Proceeding to check the login details");
+
             throw new Exception("Bad Credentials");
         }catch(Exception e)
         {
             e.printStackTrace();
-            System.out.println("Proceeding to check the login details fdsaf");
         }
 
         JwtResponse jwtResponse = new JwtResponse();
@@ -65,7 +63,7 @@ public class JwtController {
 
 //        Optional<Gamer> temp = gamerRepo.findUserName(jwtRequest.getUsername());
 
-        Optional<Gamer> gamer = gamerRepo.findUserName(jwtRequest.getUsername());
+        Optional<Gamer> gamer = gamerRepo.findEmail(jwtRequest.getEmail());
 
         System.out.println("Username is" + gamer.get().getUsername());
         System.out.println("Gamer  id is" + gamer.get().getId());
@@ -78,7 +76,7 @@ public class JwtController {
         System.out.println("JWT token is "+token);
 
         jwtResponse.setToken(token);
-        jwtResponse.setEmail(jwtRequest.getUsername());
+        jwtResponse.setEmail(jwtRequest.getEmail());
         jwtResponse.setId(gamer.get().getId());
 
         return ResponseEntity.ok(jwtResponse);

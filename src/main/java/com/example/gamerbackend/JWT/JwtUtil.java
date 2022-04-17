@@ -15,7 +15,7 @@ import java.util.function.Function;
 @Service
 public class JwtUtil {
 
-    private String secret = "patient";
+    private String secret = "gamer";
 
     public String extractEmail(String token) {
         return extractClaim(token, Claims::getSubject);

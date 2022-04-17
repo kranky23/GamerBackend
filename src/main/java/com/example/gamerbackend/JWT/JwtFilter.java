@@ -34,17 +34,17 @@ public class JwtFilter extends OncePerRequestFilter {
         //At present daniki, Authorization ane peru undi key ki.. value is the kinda unna token..
         //Patient eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrYXVzaGlrc2FpMjM5NUBnbWFpbC5jb20iLCJleHAiOjE2NDg1MjgwNzgsImlhdCI6MTY0ODQ5MjA3OH0.MxWJqDWuEW2X4DBSI0mDU9LanqDGQhUWrHkUqL22NV4
         String token = null;
-        String username = null;
+        String email = null;
         if(authorizationHeader!=null && authorizationHeader.startsWith("Bearer "))
         {
             token = authorizationHeader.substring(8);
-            username = jwtUtil.extractEmail(token);
+            email = jwtUtil.extractEmail(token);
         }
 
-        if(username!=null && SecurityContextHolder.getContext().getAuthentication() == null)
+        if(email!=null && SecurityContextHolder.getContext().getAuthentication() == null)
         {
-            Gamer gamer =  registrationService.findByUserName(username);
-            UserDetails userDetails =  registrationService.loadUserByUsername(username);
+            Gamer gamer =  registrationService.findByUserName(email);
+            UserDetails userDetails =  registrationService.loadUserByUsername(email);
 
             if(jwtUtil.validateToken(token, gamer))
             {

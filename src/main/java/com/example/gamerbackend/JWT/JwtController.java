@@ -68,8 +68,8 @@ public class JwtController {
         System.out.println("Username is" + gamer.get().getUsername());
         System.out.println("Gamer  id is" + gamer.get().getId());
         System.out.println("password is" + gamer.get().getPassword());
-//        System.out.println("Doc id is" + appUser.getDoc_id());
 
+//        TODO: Should check for the "active" value and only then allow user to login based on its value
 
         String token = this.jwtUtil.generateToken(gamer.get());
 

@@ -46,7 +46,7 @@ public class RegistrationService implements UserDetailsService {
         Gamer gamer =  new Gamer(request.getUsername(),encodedPassword, request.getEmail(), true);//creating new gamer
 
         gamerRepo.save(gamer);  //saving the gamer details to our gamer repo i.e. dB
-        sendOTPEmail(gamer); // send email on successful registration
+//        sendOTPEmail(gamer); // send email on successful registration
         return gamer;
     }
 

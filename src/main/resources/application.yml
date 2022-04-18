@@ -5,8 +5,7 @@ spring:
     username: root
     password: password
   jpa:
-    hibernate.ddl-auto: create-drop
-    generate-ddl: true
+    hibernate.ddl-auto: update
     show-sql: true
   mail:
     host: smtp.gmail.com

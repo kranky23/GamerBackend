@@ -21,6 +21,7 @@ public class RegistrationController {
 
 
         Gamer gamer = registrationService.register(request);
+        System.out.println(request.isType());
 
         return gamer;
     }

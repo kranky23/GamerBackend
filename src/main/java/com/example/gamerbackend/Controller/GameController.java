@@ -1,6 +1,9 @@
 package com.example.gamerbackend.Controller;
 
-import com.example.gamerbackend.Request.GameRequest;
+import com.example.gamerbackend.Model.Genre;
+import com.example.gamerbackend.Repo.GenreRepo;
+import com.example.gamerbackend.Service.GenreService;
+import lombok.AllArgsConstructor;
 import org.json.JSONException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -11,9 +14,24 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
+
+@AllArgsConstructor
 @CrossOrigin(origins ="http://localhost:4200")
 public class GameController {
 
+    GenreService genreService;
+    private GenreRepo genreRepo;
+
+    @GetMapping(value = "/games/genre/{genre}")
+    private List<Genre> getGameDetailsByGenre(@PathVariable String genre)
+    {
+        List<Genre> list = genreRepo.getByGenre(genre);
+        for(Genre g : list)
+        {
+            System.out.print("game is " + g.getTitle() + "  ");
+        }
+        return list;
+    }
 
 
     @GetMapping(value = "/games")
@@ -33,8 +51,8 @@ public class GameController {
         RestTemplate restTemplate = new RestTemplate();
 
         Object games = (LinkedHashMap) restTemplate.getForObject(url,Object.class);
-        System.out.println(games);
-        System.out.println(((LinkedHashMap<?, ?>) games).keySet());
+//        System.out.println(games);
+//        System.out.println(((LinkedHashMap<?, ?>) games).keySet());
 
 //        LinkedHashMap game = restTemplate.getForObject(url,LinkedHashMap.class);
 //        System.out.println(game.values());

@@ -64,7 +64,6 @@ public class JwtController {
 //        Optional<Gamer> temp = gamerRepo.findUserName(jwtRequest.getUsername());
 
         Optional<Gamer> gamer = gamerRepo.findEmail(jwtRequest.getEmail());
-
         System.out.println("Username is" + gamer.get().getUsername());
         System.out.println("Gamer  id is" + gamer.get().getId());
         System.out.println("password is" + gamer.get().getPassword());

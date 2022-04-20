@@ -42,8 +42,9 @@ public class RegistrationService implements UserDetailsService {
 
 
         String encodedPassword = bCryptPasswordEncoder.encode(request.getPassword());
-
-        Gamer gamer =  new Gamer(request.getUsername(),encodedPassword, request.getEmail(), true);//creating new gamer
+        //if type == true then gamer
+        //else type == false then admin
+        Gamer gamer =  new Gamer(request.getUsername(),encodedPassword, request.getEmail(), request.isType());//creating new gamer
 
         gamerRepo.save(gamer);  //saving the gamer details to our gamer repo i.e. dB
 //        sendOTPEmail(gamer); // send email on successful registration

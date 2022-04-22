@@ -1,8 +1,10 @@
 package com.example.gamerbackend.Model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.util.List;
 
 @EqualsAndHashCode
 
@@ -44,4 +46,5 @@ public class Games {
     public void setSteamid(Long steamid) {
         this.steamid = steamid;
     }
+
 }

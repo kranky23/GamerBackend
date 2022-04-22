@@ -37,13 +37,14 @@ public class JwtFilter extends OncePerRequestFilter {
         String email = null;
         if(authorizationHeader!=null && authorizationHeader.startsWith("Bearer "))
         {
-            token = authorizationHeader.substring(8);
+            token = authorizationHeader.substring(7);
             email = jwtUtil.extractEmail(token);
+            System.out.println("extracted email from the token is " + email);
         }
 
         if(email!=null && SecurityContextHolder.getContext().getAuthentication() == null)
         {
-            Gamer gamer =  registrationService.findByUserName(email);
+            Gamer gamer =  registrationService.findByEmail(email);
             UserDetails userDetails =  registrationService.loadUserByUsername(email);
 
             if(jwtUtil.validateToken(token, gamer))

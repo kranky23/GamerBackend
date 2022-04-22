@@ -64,9 +64,10 @@ public class JwtController {
 //        Optional<Gamer> temp = gamerRepo.findUserName(jwtRequest.getUsername());
 
         Optional<Gamer> gamer = gamerRepo.findEmail(jwtRequest.getEmail());
-        System.out.println("Username is" + gamer.get().getUsername());
-        System.out.println("Gamer  id is" + gamer.get().getId());
-        System.out.println("password is" + gamer.get().getPassword());
+        System.out.println("Username is " + gamer.get().getUsername());
+        System.out.println("Gamer  id is " + gamer.get().getId());
+        System.out.println("password is " + gamer.get().getPassword());
+        System.out.println("Type of gamer is " + gamer.get().isType());
 
 //        TODO: Should check for the "active" value and only then allow user to login based on its value
 

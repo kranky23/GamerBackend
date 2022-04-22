@@ -1,5 +1,6 @@
 package com.example.gamerbackend.Model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.EqualsAndHashCode;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -8,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @EqualsAndHashCode
 
@@ -31,6 +33,10 @@ public class Gamer implements UserDetails {
 
     @Column
     private boolean type; //if 1 then gamer else if 0 then admin
+
+    @OneToMany(mappedBy = "gamer",cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private List<Comments> comments;
 
     public Gamer(String username, String password, String email, boolean type) {
         this.username = username;
@@ -79,7 +85,22 @@ public class Gamer implements UserDetails {
         this.email = email;
     }
 
+    public boolean isType() {
+        return type;
+    }
 
+    public void setType(boolean type) {
+        this.type = type;
+    }
+
+    @JsonManagedReference
+    public List<Comments> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comments> comments) {
+        this.comments = comments;
+    }
 
     @Override
     public boolean isAccountNonExpired() {

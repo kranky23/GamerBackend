@@ -39,12 +39,12 @@ public class JwtUtil {
 
     public String generateToken(Gamer gamer) {
         Map<String, Object> claims = new HashMap<>();
-        return createToken(claims, gamer);
+        return createToken(claims, gamer.getEmail());
     }
 
-    private String createToken(Map<String, Object> claims, Gamer gamer) {
+    private String createToken(Map<String, Object> claims, String email) {
 
-        return Jwts.builder().setClaims(claims).setSubject(gamer.getUsername()).setIssuedAt(new Date(System.currentTimeMillis()))
+        return Jwts.builder().setClaims(claims).setSubject(email).setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
                 .signWith(SignatureAlgorithm.HS256, secret).compact();
     }
@@ -52,7 +52,7 @@ public class JwtUtil {
     //changed UserDetails class to AppUser in the function parameter.. undo it if anything goes wrong
     public Boolean validateToken(String token, Gamer gamer) {
         final String email = extractEmail(token);
-        System.out.println("Username obtained from the JWT validate Token is " + gamer.getUsername());
-        return (email.equals(gamer.getUsername()) && !isTokenExpired(token));
+        System.out.println("Username obtained from the JWT validate Token is " + gamer.getEmail());
+        return (email.equals(gamer.getEmail()) && !isTokenExpired(token));
     }
 }

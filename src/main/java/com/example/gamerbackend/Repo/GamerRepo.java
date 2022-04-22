@@ -26,4 +26,7 @@ public interface GamerRepo extends JpaRepository<Gamer,Long> {
 
     @Query
     void deleteGamerByEmail(String email);
+
+    @Query("select u from gamer u where u.email = ?1")
+    Gamer getByEmail(String email);
 }

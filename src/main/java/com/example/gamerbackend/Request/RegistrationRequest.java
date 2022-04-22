@@ -21,7 +21,7 @@ public class RegistrationRequest {
         this.password = password;
         this.repassword = repassword;
         this.email = email;
-        this.type = type;
+        this.type = true;
     }
 
 }

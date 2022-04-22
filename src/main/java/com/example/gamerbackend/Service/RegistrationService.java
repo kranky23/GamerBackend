@@ -81,6 +81,12 @@ public class RegistrationService implements UserDetailsService {
         return null;
     }
 
+    public Gamer findByEmail(String email)
+    {
+        Gamer gamer = gamerRepo.getByEmail(email);
+        return gamer;
+    }
+
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Optional<Gamer> byEmail = gamerRepo.findEmail(email);

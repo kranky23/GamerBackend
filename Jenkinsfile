@@ -41,14 +41,14 @@ pipeline
             {
                 steps
                 {
-                    withCredentials([string(credentialsId: 'docker_gamerbackend_token', variable: 'dockerpwd')])
-                    {
+//                     withCredentials([string(credentialsId: 'docker_gamerbackend_token', variable: 'dockerpwd')])
+//                     {
                         //sh 'docker login -u kranky23 -p $(dockerpwd)'
 
                         bat 'echo DOCKER_CREDENTIALS | docker login --username kranky23 --password-stdin'
 
                         bat 'docker push kranky23/gamerbackend'
-                    }
+//                     }
                 }
             }
 

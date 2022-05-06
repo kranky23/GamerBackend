@@ -47,7 +47,7 @@ public class RegistrationService implements UserDetailsService {
         Gamer gamer =  new Gamer(request.getUsername(),encodedPassword, request.getEmail(), request.isType());//creating new gamer
 
         gamerRepo.save(gamer);  //saving the gamer details to our gamer repo i.e. dB
-//        sendOTPEmail(gamer); // send email on successful registration
+        sendOTPEmail(gamer); // send email on successful registration
         return gamer;
     }
 
@@ -64,7 +64,7 @@ public class RegistrationService implements UserDetailsService {
                 + "<p>Welcome to GamerHub! "
                 + "<p><b>" + "</b></p>"
                 + "<br>"
-                + "<p>Keep exploring games and do not forget to review your favourite games.</p>";
+                + "<p>Keep exploring games and do not forget to view and comment on your favourite games.</p>";
 
         helper.setSubject(subject);
 

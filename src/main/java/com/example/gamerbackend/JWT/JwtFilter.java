@@ -26,9 +26,14 @@ public class JwtFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        response.setHeader("Access-Control-Max-Age", "3600");
+        response.setHeader("Access-Control-Allow-Headers", "authorization, content-type, xsrf-token");
+        response.addHeader("Access-Control-Expose-Headers", "xsrf-token");
 
         String authorizationHeader = request.getHeader("Authorization");
-
+        System.out.println("authorization header is " + authorizationHeader);
         //the following is the "Authorization" given in POSTMAN.. "Authorization" is CASE SENSITIVE..
         //Key ki em peru istavo as it is adhe peru iyyi ikada guda paina getHeader() method lo
         //At present daniki, Authorization ane peru undi key ki.. value is the kinda unna token..
@@ -38,7 +43,14 @@ public class JwtFilter extends OncePerRequestFilter {
         if(authorizationHeader!=null && authorizationHeader.startsWith("Bearer "))
         {
             token = authorizationHeader.substring(7);
-            email = jwtUtil.extractEmail(token);
+            try {
+                email = jwtUtil.extractEmail(token);
+
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
             System.out.println("extracted email from the token is " + email);
         }
 
@@ -54,6 +66,10 @@ public class JwtFilter extends OncePerRequestFilter {
                 usernamePasswordAuthenticationToken
                         .setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                 SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+            }
+            else
+            {
+                System.out.println("token is not validated!");
             }
         }
         filterChain.doFilter(request, response);

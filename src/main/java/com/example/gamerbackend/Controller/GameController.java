@@ -1,5 +1,6 @@
 package com.example.gamerbackend.Controller;
 
+import com.example.gamerbackend.Model.Games;
 import com.example.gamerbackend.Model.Genre;
 import com.example.gamerbackend.Repo.GenreRepo;
 import com.example.gamerbackend.Service.GenreService;
@@ -16,7 +17,7 @@ import java.util.List;
 @RestController
 
 @AllArgsConstructor
-@CrossOrigin(origins ="http://localhost:4200")
+@CrossOrigin(origins ={"*"})
 public class GameController {
 
     GenreService genreService;
@@ -42,6 +43,18 @@ public class GameController {
 
         Object games = restTemplate.getForObject(url,Object.class);
         return Arrays.asList(games);
+    }
+
+    @GetMapping(value = "/newReleaseGamesFromMyDatabase")
+    private List<Genre> newReleaseGamesFromMyDatabase() throws JSONException {
+        List<Genre> genres = genreRepo.getByReleaseDate();
+//        for(Genre i:genres)
+//        {
+//            System.out.println(i.getTitle());
+//        }
+        return genreRepo.getByReleaseDate();
+
+
     }
 
     @GetMapping(value = "/newReleaseGames/{appid}")
@@ -80,6 +93,9 @@ public class GameController {
 
         return games;
     }
+
+
+
 
 
 }

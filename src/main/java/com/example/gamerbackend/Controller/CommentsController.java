@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 
 @AllArgsConstructor
-@CrossOrigin(origins ="http://localhost:4200")
+@CrossOrigin(origins ={"*"})
 public class CommentsController {
 
     private CommentsService commentsService;

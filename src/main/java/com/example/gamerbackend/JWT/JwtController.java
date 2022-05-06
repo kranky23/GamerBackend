@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins={"*"})
 @RestController
 public class JwtController {
 
@@ -64,6 +64,8 @@ public class JwtController {
 //        Optional<Gamer> temp = gamerRepo.findUserName(jwtRequest.getUsername());
 
         Optional<Gamer> gamer = gamerRepo.findEmail(jwtRequest.getEmail());
+
+
         System.out.println("Username is " + gamer.get().getUsername());
         System.out.println("Gamer  id is " + gamer.get().getId());
         System.out.println("password is " + gamer.get().getPassword());
@@ -78,6 +80,7 @@ public class JwtController {
         jwtResponse.setToken(token);
         jwtResponse.setEmail(jwtRequest.getEmail());
         jwtResponse.setId(gamer.get().getId());
+        jwtResponse.setUsername(gamer.get().getUsername());
 
         return ResponseEntity.ok(jwtResponse);
     }

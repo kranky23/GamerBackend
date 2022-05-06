@@ -1,5 +1,6 @@
 package com.example.gamerbackend.Repo;
 
+import com.example.gamerbackend.Model.Games;
 import com.example.gamerbackend.Model.Genre;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -12,4 +13,8 @@ public interface GenreRepo extends JpaRepository<Genre,Long> {
     @Transactional
     @Query("select u from genre u where u.genre = ?1")
     List<Genre> getByGenre(String genre);
+
+    @Transactional
+    @Query("select u from genre u where u.releasedate IS NOT NULL")
+    List<Genre> getByReleaseDate();
 }

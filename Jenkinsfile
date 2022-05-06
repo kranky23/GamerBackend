@@ -45,8 +45,8 @@ pipeline
 //                     {
                         //sh 'docker login -u kranky23 -p $(dockerpwd)'
 
-                        bat 'echo DOCKER_CREDENTIALS | docker login --username kranky23 --password-stdin'
-
+//                         bat 'echo DOCKER_CREDENTIALS | docker login --username kranky23 --password-stdin'
+                        bat 'docker login --username kranky23 -p $(docker_gamerbackend_token)'
                         bat 'docker push kranky23/gamerbackend'
 //                     }
                 }

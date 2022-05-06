@@ -27,7 +27,7 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
-
+    //nothing to add
         String authorizationHeader = request.getHeader("Authorization");
         System.out.println("authorization header is " + authorizationHeader);
         //the following is the "Authorization" given in POSTMAN.. "Authorization" is CASE SENSITIVE..

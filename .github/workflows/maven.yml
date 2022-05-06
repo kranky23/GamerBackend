@@ -14,7 +14,7 @@ jobs:
 
     runs-on: windows-latest
     env:
-      DATABASE_URL: jdbc:mysql://localhost:3306/gamer
+      DATABASE_URL: jdbc:mysql://localhost:3306/gamer?enabledTLSProtocols=TLSv1.2
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11

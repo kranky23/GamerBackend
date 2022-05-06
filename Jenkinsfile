@@ -41,7 +41,7 @@ pipeline
             {
                 steps
                 {
-                    withCredentials([string(credentialsId: 'docker-login', variable: 'dockerpwd')])
+                    withCredentials([string(credentialsId: 'docker_gamerbackend_token', variable: 'dockerpwd')])
                     {
                         //sh 'docker login -u kranky23 -p $(dockerpwd)'
 

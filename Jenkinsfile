@@ -1,6 +1,11 @@
 pipeline
 {
-    		agent any
+    agent any
+
+    environment
+    {
+        DOCKER_CREDENTIALS = credentials('docker_gamerbackend_token')
+    }
         stages
         {
             stage('Git Pull')
@@ -36,11 +41,14 @@ pipeline
             {
                 steps
                 {
+                    withCredentials([string(credentialsId: 'docker-login', variable: 'dockerpwd')])
+                    {
                         //sh 'docker login -u kranky23 -p $(dockerpwd)'
 
-                        //bat 'type ~/my_password.txt | docker login --username kranky23 --password-stdin'
+                        bat 'echo DOCKER_CREDENTIALS | docker login --username kranky23 --password-stdin'
 
                         bat 'docker push kranky23/gamerbackend'
+                    }
                 }
             }
 

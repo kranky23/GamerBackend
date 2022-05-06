@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     env:
       DATABASE_URL: jdbc:mysql://localhost:3306/gamer
     steps:
@@ -24,5 +24,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-
       run: mvn clean install

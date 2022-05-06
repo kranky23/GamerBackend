@@ -38,7 +38,7 @@ pipeline
                 {
                         //sh 'docker login -u kranky23 -p $(dockerpwd)'
 
-                        bat 'type ~/my_password.txt | docker login --username kranky23 --password-stdin'
+                        //bat 'type ~/my_password.txt | docker login --username kranky23 --password-stdin'
 
                         bat 'docker push kranky23/gamerbackend'
                 }

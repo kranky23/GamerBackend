@@ -9,7 +9,7 @@ pipeline
                 {
                     // Get code from a GitHub repository
                     // Make sure to add your own git url and credentialsId
-    				git url: 'https://github.com/kranky23/CalculatorUsingDevOps.git', branch: 'main',
+    				git url: 'https://github.com/kranky23/GamerBackend.git', branch: 'master',
                      credentialsId: 'jenkins_demo'
                 }
             }

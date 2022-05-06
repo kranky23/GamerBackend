@@ -46,7 +46,7 @@ pipeline
                         //sh 'docker login -u kranky23 -p $(dockerpwd)'
 
 //                         bat 'echo DOCKER_CREDENTIALS | docker login --username kranky23 --password-stdin'
-                        bat 'C:/Users/Kaushik/Desktop/gamerDocker/my_password.txt | docker login --username kranky23 --password-stdin'
+                        bat 'type C:/Users/Kaushik/Desktop/gamerDocker/my_password.txt | docker login --username kranky23 --password-stdin'
                         bat 'docker push kranky23/gamerbackend'
 //                     }
                 }

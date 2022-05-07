@@ -28,6 +28,14 @@ public class JwtFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
     //nothing to add
+
+        if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
+            response.setStatus(HttpServletResponse.SC_OK);
+        }
+//        else {
+//            filterChain.doFilter(request, response);
+//        }
+
         String authorizationHeader = request.getHeader("Authorization");
         System.out.println("authorization header is " + authorizationHeader);
         //the following is the "Authorization" given in POSTMAN.. "Authorization" is CASE SENSITIVE..
@@ -38,7 +46,7 @@ public class JwtFilter extends OncePerRequestFilter {
         String email = null;
         if(authorizationHeader!=null && authorizationHeader.startsWith("Bearer "))
         {
-            token = authorizationHeader.substring(8);
+            token = authorizationHeader.substring(7);
             try {
                 email = jwtUtil.extractEmail(token);
 

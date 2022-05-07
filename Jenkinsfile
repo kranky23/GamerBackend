@@ -3,7 +3,7 @@ pipeline
     agent any
     environment
     {
-       DATABASE_URL=jdbc:mysql://localhost:3306/gamerDB
+       DATABASE_URL = "jdbc:mysql://localhost:3306/gamerDB"
     }
         stages
         {

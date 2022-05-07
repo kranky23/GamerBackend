@@ -1,6 +1,10 @@
 pipeline
 {
     agent any
+    environment
+    {
+       DATABASE_URL = "jdbc:mysql://localhost:3306/gamerDB"
+    }
         stages
         {
             stage('Git Pull')
@@ -44,15 +48,15 @@ pipeline
                 }
             }
 
-//             stage('Ansible deploy and Pull Image from docker hub ')
-//             {
-//                 steps
-//                 {
-//                     //Ansible Deploy to remote server (managed host)
-//                     ansiblePlaybook colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'docker-compose.yml'
-//                     echo 'Docker compose running successfully'
-//                 }
-//             }
+            stage('Ansible deploy and Pull Image from docker hub ')
+            {
+                steps
+                {
+                    //Ansible Deploy to remote server (managed host)
+                    ansiblePlaybook colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'playbook.yml'
+                    echo 'Docker compose running successfully'
+                }
+            }
 
         }
 }

@@ -1,0 +1,2 @@
+[docker]
+localhost ansible_sudo_pass=password ansible_ssh_pass=password  ansible_ssh_user=kaushik ansible_python_interpreter=/usr/bin/python2.7

@@ -1,11 +1,6 @@
 pipeline
 {
     agent any
-
-    environment
-    {
-        DOCKER_CREDENTIALS = credentials('docker_gamerbackend_token')
-    }
         stages
         {
             stage('Git Pull')
@@ -23,7 +18,7 @@ pipeline
                 steps
                 {
                     // Maven build, 'sh' specifies it is a shell command
-                    bat 'mvn clean install'
+                    sh 'mvn clean install'
                 }
             }
 
@@ -31,7 +26,7 @@ pipeline
             {
                 steps
                 {
-                    bat 'docker build -t kranky23/gamerbackend:latest .'
+                    sh 'docker build -t kranky23/gamerbackend:latest .'
 
                     echo 'Docker image built '
                 }
@@ -41,15 +36,11 @@ pipeline
             {
                 steps
                 {
-//                     withCredentials([usernamePassword(credentialsId: 'docker_gamerbackend_token', variable: 'DOCKER_CREDENTIALS ')])
-//                     {
-                        //sh 'docker login -u kranky23 -p $(dockerpwd)'
+//
 
-//                         bat 'echo DOCKER_CREDENTIALS | docker login --username kranky23 --password-stdin'
-                        bat 'docker login --username kranky23 --password %DOCKER_LOGIN%'
-//                         bat 'type C:/Users/Kaushik/Desktop/gamerDocker/my_password.txt | docker login --username kranky23 --password-stdin'
-                        bat 'docker push kranky23/gamerbackend'
-//                     }
+                        sh 'cat ~/my_password.txt | docker login --username kranky23 --password-stdin'
+                        sh 'docker push kranky23/gamerbackend'
+//
                 }
             }
 

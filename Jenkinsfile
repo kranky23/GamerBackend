@@ -53,15 +53,15 @@ pipeline
                 }
             }
 
-            stage('Ansible deploy and Pull Image from docker hub ')
-            {
-                steps
-                {
-                    //Ansible Deploy to remote server (managed host)
-                    ansiblePlaybook colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'docker-compose.yml'
-                    echo 'Docker compose running successfully'
-                }
-            }
+//             stage('Ansible deploy and Pull Image from docker hub ')
+//             {
+//                 steps
+//                 {
+//                     //Ansible Deploy to remote server (managed host)
+//                     ansiblePlaybook colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory', playbook: 'docker-compose.yml'
+//                     echo 'Docker compose running successfully'
+//                 }
+//             }
 
         }
 }

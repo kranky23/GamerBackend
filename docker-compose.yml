@@ -5,8 +5,8 @@ services:
     image: "mysql:latest"
     container_name: gamer_db
     volumes:
-      - mysql-data:/home/kaushik
-      - "/home/kaushik/gamer.sql:/docker-entrypoint-initdb.d/1.sql"
+      - mysql-data:/home/kaushik/gamerSQL_Script
+      - "/home/kaushik/gamerSQL_Script/gamer.sql:/docker-entrypoint-initdb.d/1.sql"
     ports:
       - 3308:3306
     environment:

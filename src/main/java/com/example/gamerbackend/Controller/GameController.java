@@ -5,7 +5,10 @@ import com.example.gamerbackend.Model.Genre;
 import com.example.gamerbackend.Repo.GenreRepo;
 import com.example.gamerbackend.Service.GenreService;
 import lombok.AllArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.JSONException;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -23,6 +26,9 @@ public class GameController {
     GenreService genreService;
     private GenreRepo genreRepo;
 
+    private static final Logger logger = LogManager.getLogger(GameController.class);
+
+
     @GetMapping(value = "/games/genre/{genre}")
     private List<Genre> getGameDetailsByGenre(@PathVariable String genre)
     {
@@ -31,6 +37,10 @@ public class GameController {
         {
             System.out.print("game is " + g.getTitle() + "  ");
         }
+        if(list.isEmpty())
+            logger.info("[NO GAMES FOUND IN " + genre + " CATEGORY AND EXITED WITH STATUS CODE " + HttpStatus.NOT_FOUND + " ]");
+        else
+            logger.info("[GETTING GAMES OF " + genre + " CATEGORY WITH STATUS CODE " + HttpStatus.OK + " ]");
         return list;
     }
 
@@ -42,16 +52,25 @@ public class GameController {
         RestTemplate restTemplate = new RestTemplate();
 
         Object games = restTemplate.getForObject(url,Object.class);
+        if(Arrays.asList(games).size()==0)
+            logger.info("[NO GAMES FOUND IN DATABASE " + HttpStatus.NOT_FOUND + " ]");
+        else
+            logger.info("[GETTING ALL GAMES WITH RESPONSE CODE " + HttpStatus.OK + "]");
         return Arrays.asList(games);
     }
 
     @GetMapping(value = "/newReleaseGamesFromMyDatabase")
     private List<Genre> newReleaseGamesFromMyDatabase() throws JSONException {
         List<Genre> genres = genreRepo.getByReleaseDate();
+
 //        for(Genre i:genres)
 //        {
 //            System.out.println(i.getTitle());
 //        }
+        if(genres.isEmpty())
+            logger.info("[NO NEWLY RELEASED GAMES FOUND IN DATABASE " + HttpStatus.NOT_FOUND + " ]");
+        else
+            logger.info("[GETTING NEWLY RELEASED GAMES FROM MY DATABASE "+ HttpStatus.OK + " ]");
         return genreRepo.getByReleaseDate();
 
 
@@ -90,7 +109,7 @@ public class GameController {
 //        System.out.println(response.getSuccess());
 
 //        JSONPObject json = new JSONPObject(games);
-
+        logger.info("[GETTING GAME DETAILS OF GAME WITH STEAM ID " + appid + " WITH RESPONSE CODE " + HttpStatus.OK);
         return games;
     }
 

@@ -7,6 +7,8 @@ import com.example.gamerbackend.Repo.GenreRepo;
 import com.example.gamerbackend.Request.GameDetailsRequest;
 import com.example.gamerbackend.Request.GameRequest;
 import lombok.AllArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,6 +22,8 @@ public class GamesInsertController {
     private final GamesRepo gamesRepo;
     private final GenreRepo genreRepo;
 
+    private static final Logger logger = LogManager.getLogger(GamesInsertController.class);
+
     @PostMapping(value = "/insertGames")
     private void putGames(@RequestBody GameRequest gameRequest)
     {
@@ -27,6 +31,9 @@ public class GamesInsertController {
         game.setSteamid(gameRequest.getSteamid());
         game.setTitle(gameRequest.getTitle());
 //        System.out.println("game obtained is " + game.getTitle() + "  " + game.getSteamid());
+
+        logger.info("[PUT GAMES CALLED]");
+
         gamesRepo.save(game);
 //        return "Game Stored!";
     }
@@ -46,6 +53,7 @@ public class GamesInsertController {
         genre.setSteamid(gameDetailsRequest.getSteamid());
         genre.setTitle(gameDetailsRequest.getTitle());
 //        System.out.println("game obtained is " + game.getTitle() + "  " + game.getSteamid());
+        logger.info("[NEW GAME DETAILS ARE INSERTED CALLED]");
         genreRepo.save(genre);
 
 //        return "Game Stored!";

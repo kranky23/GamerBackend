@@ -32,15 +32,20 @@ public class AdminController {
         if(temp==null)
             System.out.println("temp is null");
         List<Gamer> gamers = gamerRepo.getAllGamers();
-
-        logger.info("[FETCH ALL GAMERS CALLED]");
-
+        if(gamers.isEmpty())
+            logger.info("[NO GAMERS REGISTERED WITH RESPONSE ]" + HttpStatus.NOT_FOUND + " ]");
+        else
+            logger.info("[FETCHING GAMERS CALLED]");
         return gamers;
     }
 
     @DeleteMapping(path = "deleteGamer/{email}")
     public void deleteGamer(@PathVariable String email)
     {
+        if(gamerRepo.findEmail(email)==null)
+            logger.info("[USER WITH THE" + email + "DOES NOT EXIST " + HttpStatus.BAD_REQUEST + " ]");
+        else
+            logger.info("[DELETE GAMER CALLED WITH EMAIL " + email + " WITH RESPONSE " + HttpStatus.OK + " ]");
         gamerRepo.deleteGamerByEmail(email);
 //        return "Gamer deleted successfully!";
 //        return new ResponseEntity<>("DELETE Response", HttpStatus.OK);

@@ -10,6 +10,9 @@ import com.example.gamerbackend.Repo.GamesRepo;
 import com.example.gamerbackend.Request.CommentsRequest;
 import com.example.gamerbackend.Service.CommentsService;
 import lombok.AllArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,6 +29,8 @@ public class CommentsController {
     private GamerRepo gamerRepo;
     private CommentsRepo commentsRepo;
 
+    private static final Logger logger = LogManager.getLogger(CommentsController.class);
+
     @PostMapping(value = "/postcomment/{email}/{steamid}")
     private ResponseEntity<?> postComment(@RequestBody CommentsRequest commentsRequest,
                                           @PathVariable String email, @PathVariable Long steamid)
@@ -38,12 +43,16 @@ public class CommentsController {
         //if the game is not in my dB, then I am instantly adding it to my dB and then adding the comments to that game
         if(temp==null)
         {
+            logger.info("[GAME NOT FOUND IN DATABASE WITH STATUS CODE " + HttpStatus.NOT_FOUND + " ]");
             System.out.println(" i am null ");
             Games game = new Games();
             game.setTitle(commentsRequest.getTitle());
             game.setSteamid(steamid);
             gamesRepo.save(game);
+            logger.info("[GAME ADDED TO THE DATABASE WITH STATUS CODE " + HttpStatus.OK);
         }
+
+        logger.info("[COMMENT ADDED TO THE DATABASE WITH STATUS CODE " + HttpStatus.OK);
 
         commentsService.postComment(commentsRequest,gamer,steamid);
         return ResponseEntity.ok(new JwtResponse());
@@ -53,11 +62,16 @@ public class CommentsController {
     private List<Comments> getCommentsByGame(@PathVariable Long steamid)
     {
         List<Comments> comments = commentsRepo.getBySteamID(steamid);
-
+        if(comments.size()==0)
+            logger.info("[NO COMMENTS FOUND FOR GAME WITH STEAM ID " + steamid + " " + HttpStatus.NOT_FOUND + " ]");
+        else
+            logger.info("[GETTING COMMENTS OF GAME WITH STEAM ID " +  steamid + " " +HttpStatus.OK + " ]");
         for(Comments c : comments)
         {
             System.out.println("Comments are " + c);
         }
+
+
         return comments;
     }
 }

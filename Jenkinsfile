@@ -48,7 +48,7 @@ pipeline
                 }
             }
 
-            stage('Ansible deploy and Pull Image from docker hub ')
+            stage('Ansible deploy and Running docker compose ')
             {
                 steps
                 {

@@ -33,9 +33,9 @@ public class AdminController {
             System.out.println("temp is null");
         List<Gamer> gamers = gamerRepo.getAllGamers();
         if(gamers.isEmpty())
-            logger.info("[NO GAMERS REGISTERED WITH RESPONSE ]" + HttpStatus.NOT_FOUND + " ]");
+            logger.info("[" + HttpStatus.NOT_FOUND + "]");
         else
-            logger.info("[FETCHING GAMERS CALLED]");
+            logger.info("[" + HttpStatus.OK + "]");
         return gamers;
     }
 
@@ -43,9 +43,9 @@ public class AdminController {
     public void deleteGamer(@PathVariable String email)
     {
         if(gamerRepo.findEmail(email)==null)
-            logger.info("[USER WITH THE" + email + "DOES NOT EXIST " + HttpStatus.BAD_REQUEST + " ]");
+            logger.info("[" + HttpStatus.BAD_REQUEST + "]");
         else
-            logger.info("[DELETE GAMER CALLED WITH EMAIL " + email + " WITH RESPONSE " + HttpStatus.OK + " ]");
+            logger.info("[" + HttpStatus.OK + "]");
         gamerRepo.deleteGamerByEmail(email);
 //        return "Gamer deleted successfully!";
 //        return new ResponseEntity<>("DELETE Response", HttpStatus.OK);

@@ -38,9 +38,9 @@ public class GameController {
             System.out.print("game is " + g.getTitle() + "  ");
         }
         if(list.isEmpty())
-            logger.info("[NO GAMES FOUND IN " + genre + " CATEGORY AND EXITED WITH STATUS CODE " + HttpStatus.NOT_FOUND + " ]");
+            logger.info("[" + HttpStatus.NOT_FOUND + "]");
         else
-            logger.info("[GETTING GAMES OF " + genre + " CATEGORY WITH STATUS CODE " + HttpStatus.OK + " ]");
+            logger.info("[" + HttpStatus.OK + "]");
         return list;
     }
 
@@ -53,9 +53,9 @@ public class GameController {
 
         Object games = restTemplate.getForObject(url,Object.class);
         if(Arrays.asList(games).size()==0)
-            logger.info("[NO GAMES FOUND IN DATABASE " + HttpStatus.NOT_FOUND + " ]");
+            logger.info("[" + HttpStatus.NOT_FOUND + "]");
         else
-            logger.info("[GETTING ALL GAMES WITH RESPONSE CODE " + HttpStatus.OK + "]");
+            logger.info("[" + HttpStatus.OK + "]");
         return Arrays.asList(games);
     }
 

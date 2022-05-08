@@ -9,6 +9,7 @@ import com.example.gamerbackend.Request.GameRequest;
 import lombok.AllArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,7 +33,8 @@ public class GamesInsertController {
         game.setTitle(gameRequest.getTitle());
 //        System.out.println("game obtained is " + game.getTitle() + "  " + game.getSteamid());
 
-        logger.info("[PUT GAMES CALLED]");
+        logger.info("[" + HttpStatus.OK + "]");
+
 
         gamesRepo.save(game);
 //        return "Game Stored!";
@@ -53,7 +55,8 @@ public class GamesInsertController {
         genre.setSteamid(gameDetailsRequest.getSteamid());
         genre.setTitle(gameDetailsRequest.getTitle());
 //        System.out.println("game obtained is " + game.getTitle() + "  " + game.getSteamid());
-        logger.info("[NEW GAME DETAILS ARE INSERTED CALLED]");
+        logger.info("[" + HttpStatus.OK + "]");
+
         genreRepo.save(genre);
 
 //        return "Game Stored!";

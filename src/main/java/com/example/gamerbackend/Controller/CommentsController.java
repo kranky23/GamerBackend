@@ -43,16 +43,16 @@ public class CommentsController {
         //if the game is not in my dB, then I am instantly adding it to my dB and then adding the comments to that game
         if(temp==null)
         {
-            logger.info("[GAME NOT FOUND IN DATABASE WITH STATUS CODE " + HttpStatus.NOT_FOUND + " ]");
+            logger.info("[" + HttpStatus.NOT_FOUND + "]");
             System.out.println(" i am null ");
             Games game = new Games();
             game.setTitle(commentsRequest.getTitle());
             game.setSteamid(steamid);
             gamesRepo.save(game);
-            logger.info("[GAME ADDED TO THE DATABASE WITH STATUS CODE " + HttpStatus.OK);
+            logger.info("[" + HttpStatus.OK + "]");
         }
 
-        logger.info("[COMMENT ADDED TO THE DATABASE WITH STATUS CODE " + HttpStatus.OK);
+        logger.info("[" + HttpStatus.OK + "]");
 
         commentsService.postComment(commentsRequest,gamer,steamid);
         return ResponseEntity.ok(new JwtResponse());
@@ -63,9 +63,9 @@ public class CommentsController {
     {
         List<Comments> comments = commentsRepo.getBySteamID(steamid);
         if(comments.size()==0)
-            logger.info("[NO COMMENTS FOUND FOR GAME WITH STEAM ID " + steamid + " " + HttpStatus.NOT_FOUND + " ]");
+            logger.info("[" + HttpStatus.NOT_FOUND + "]");
         else
-            logger.info("[GETTING COMMENTS OF GAME WITH STEAM ID " +  steamid + " " +HttpStatus.OK + " ]");
+            logger.info("[" + HttpStatus.OK + "]");
         for(Comments c : comments)
         {
             System.out.println("Comments are " + c);

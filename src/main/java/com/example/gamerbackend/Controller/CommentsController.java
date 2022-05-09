@@ -16,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -28,6 +29,7 @@ public class CommentsController {
     private GamesRepo gamesRepo;
     private GamerRepo gamerRepo;
     private CommentsRepo commentsRepo;
+
 
     private static final Logger logger = LogManager.getLogger(CommentsController.class);
 
@@ -74,4 +76,23 @@ public class CommentsController {
 
         return comments;
     }
+
+    @GetMapping(value = "/getCommentsOfGamer/{username}")
+    private List<Comments> getCommentsByGamer(@PathVariable String username)
+    {
+        List<Comments> comments = commentsRepo.getByGamerUsername(username);
+        if(comments.size()==0)
+            logger.info("[" + HttpStatus.NOT_FOUND + "]");
+        else
+            logger.info("[" + HttpStatus.OK + "]");
+
+//        for(Comments c : comments)
+//        {
+//            System.out.println("Comments are " + c);
+//        }
+
+        return comments;
+    }
+
+
 }

@@ -23,7 +23,7 @@ public class Comments {
     @Column
     private LocalDateTime localDateTime;
 
-    @Column
+    @Column(columnDefinition = "text")
     private String comment;
 
     @Column

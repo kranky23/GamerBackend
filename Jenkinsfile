@@ -43,7 +43,7 @@ pipeline
                 {
 //
 
-                        sh 'cat ~/my_password.txt | docker login --username kranky23 --password-stdin'
+                        sh 'cat ~/my_password.txt | sudo docker login --username kranky23 --password-stdin'
                         sh 'sudo docker push kranky23/gamerbackend'
 //
                 }

@@ -9,6 +9,7 @@ pipeline
         {
             stage('Git Pull')
             {
+
                 steps
                 {
                     // Get code from a GitHub repository
@@ -30,7 +31,7 @@ pipeline
             {
                 steps
                 {
-                    sh 'docker build -t kranky23/gamerbackend:latest .'
+                    sh ' sudo docker build -t kranky23/gamerbackend:latest .'
 
                     echo 'Docker image built '
                 }
@@ -43,7 +44,7 @@ pipeline
 //
 
                         sh 'cat ~/my_password.txt | docker login --username kranky23 --password-stdin'
-                        sh 'docker push kranky23/gamerbackend'
+                        sh 'sudo docker push kranky23/gamerbackend'
 //
                 }
             }

@@ -68,9 +68,9 @@ public class GameController {
 //            System.out.println(i.getTitle());
 //        }
         if(genres.isEmpty())
-            logger.info("[NO NEWLY RELEASED GAMES FOUND IN DATABASE " + HttpStatus.NOT_FOUND + " ]");
+            logger.info("[" + HttpStatus.NOT_FOUND + "]");
         else
-            logger.info("[GETTING NEWLY RELEASED GAMES FROM MY DATABASE "+ HttpStatus.OK + " ]");
+            logger.info("[" + HttpStatus.OK + "]");
         return genreRepo.getByReleaseDate();
 
 
@@ -109,7 +109,7 @@ public class GameController {
 //        System.out.println(response.getSuccess());
 
 //        JSONPObject json = new JSONPObject(games);
-        logger.info("[GETTING GAME DETAILS OF GAME WITH STEAM ID " + appid + " WITH RESPONSE CODE " + HttpStatus.OK);
+        logger.info("[" + HttpStatus.OK + "]");;
         return games;
     }
 

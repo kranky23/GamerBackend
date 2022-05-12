@@ -1,3 +1,308 @@
 09/May/2022:08:25:25 +0530 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 09/May/2022:08:25:26 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 09/May/2022:08:25:26 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11/May/2022:01:33:07 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - Starting GamerBackendApplication using Java 17.0.2 on Kaushik with PID 25524 (C:\Users\Kaushik\IdeaProjects\GamerBackend\target\classes started by Kaushik in C:\Users\Kaushik\IdeaProjects\GamerBackend)
+11/May/2022:01:33:07 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+11/May/2022:01:33:07 +0530 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+11/May/2022:01:33:07 +0530 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+11/May/2022:01:33:08 +0530 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11/May/2022:01:33:08 +0530 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 112 ms. Found 4 JPA repository interfaces.
+11/May/2022:01:33:09 +0530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+11/May/2022:01:33:09 +0530 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+11/May/2022:01:33:09 +0530 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+11/May/2022:01:33:09 +0530 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+11/May/2022:01:33:09 +0530 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11/May/2022:01:33:09 +0530 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2513 ms
+11/May/2022:01:33:10 +0530 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11/May/2022:01:33:10 +0530 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+11/May/2022:01:33:10 +0530 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11/May/2022:01:33:11 +0530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11/May/2022:01:33:11 +0530 [restartedMain] WARN  com.zaxxer.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+11/May/2022:01:33:11 +0530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11/May/2022:01:33:11 +0530 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11/May/2022:01:33:12 +0530 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11/May/2022:01:33:12 +0530 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11/May/2022:01:33:13 +0530 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11/May/2022:01:33:14 +0530 [restartedMain] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will not secure any request
+11/May/2022:01:33:14 +0530 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11/May/2022:01:33:14 +0530 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+11/May/2022:01:33:14 +0530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+11/May/2022:01:33:14 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - Started GamerBackendApplication in 8.068 seconds (JVM running for 12.743)
+11/May/2022:01:33:21 +0530 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11/May/2022:01:33:21 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11/May/2022:01:33:21 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11/May/2022:01:33:28 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - Starting GamerBackendApplication using Java 17.0.2 on Kaushik with PID 19292 (C:\Users\Kaushik\IdeaProjects\GamerBackend\target\classes started by Kaushik in C:\Users\Kaushik\IdeaProjects\GamerBackend)
+11/May/2022:01:33:28 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+11/May/2022:01:33:28 +0530 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+11/May/2022:01:33:28 +0530 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+11/May/2022:01:33:29 +0530 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11/May/2022:01:33:29 +0530 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 104 ms. Found 4 JPA repository interfaces.
+11/May/2022:01:33:31 +0530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+11/May/2022:01:33:31 +0530 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+11/May/2022:01:33:31 +0530 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+11/May/2022:01:33:31 +0530 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+11/May/2022:01:33:31 +0530 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11/May/2022:01:33:31 +0530 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2489 ms
+11/May/2022:01:33:31 +0530 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11/May/2022:01:33:31 +0530 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+11/May/2022:01:33:31 +0530 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11/May/2022:01:33:31 +0530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11/May/2022:01:33:31 +0530 [restartedMain] WARN  com.zaxxer.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+11/May/2022:01:33:32 +0530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11/May/2022:01:33:32 +0530 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11/May/2022:01:33:33 +0530 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11/May/2022:01:33:33 +0530 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11/May/2022:01:33:34 +0530 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11/May/2022:01:33:34 +0530 [restartedMain] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will not secure any request
+11/May/2022:01:33:35 +0530 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11/May/2022:01:33:35 +0530 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+11/May/2022:01:33:35 +0530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+11/May/2022:01:33:35 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - Started GamerBackendApplication in 7.281 seconds (JVM running for 8.953)
+11/May/2022:04:35:19 +0530 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m14s537ms175µs600ns).
+11/May/2022:11:53:32 +0530 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h47m40s981ms787µs400ns).
+11/May/2022:13:43:13 +0530 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11/May/2022:13:43:13 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11/May/2022:13:43:14 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11/May/2022:13:49:14 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - Starting GamerBackendApplication using Java 17.0.2 on Kaushik with PID 8012 (C:\Users\Kaushik\IdeaProjects\GamerBackend\target\classes started by Kaushik in C:\Users\Kaushik\IdeaProjects\GamerBackend)
+11/May/2022:13:49:14 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+11/May/2022:13:49:14 +0530 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+11/May/2022:13:49:14 +0530 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+11/May/2022:13:49:15 +0530 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11/May/2022:13:49:15 +0530 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 119 ms. Found 4 JPA repository interfaces.
+11/May/2022:13:49:16 +0530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+11/May/2022:13:49:16 +0530 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+11/May/2022:13:49:16 +0530 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+11/May/2022:13:49:16 +0530 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+11/May/2022:13:49:16 +0530 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11/May/2022:13:49:16 +0530 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2321 ms
+11/May/2022:13:49:16 +0530 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11/May/2022:13:49:17 +0530 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+11/May/2022:13:49:17 +0530 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11/May/2022:13:49:17 +0530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11/May/2022:13:49:17 +0530 [restartedMain] WARN  com.zaxxer.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+11/May/2022:13:49:17 +0530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11/May/2022:13:49:18 +0530 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11/May/2022:13:49:19 +0530 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11/May/2022:13:49:19 +0530 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11/May/2022:13:49:20 +0530 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11/May/2022:13:49:20 +0530 [restartedMain] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will not secure any request
+11/May/2022:13:49:20 +0530 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11/May/2022:13:49:20 +0530 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+11/May/2022:13:49:20 +0530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+11/May/2022:13:49:20 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - Started GamerBackendApplication in 7.129 seconds (JVM running for 9.249)
+11/May/2022:15:01:21 +0530 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11/May/2022:15:01:22 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11/May/2022:15:01:22 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11/May/2022:15:01:27 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - Starting GamerBackendApplication using Java 17.0.2 on Kaushik with PID 19936 (C:\Users\Kaushik\IdeaProjects\GamerBackend\target\classes started by Kaushik in C:\Users\Kaushik\IdeaProjects\GamerBackend)
+11/May/2022:15:01:27 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+11/May/2022:15:01:27 +0530 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+11/May/2022:15:01:27 +0530 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+11/May/2022:15:01:28 +0530 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11/May/2022:15:01:28 +0530 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 4 JPA repository interfaces.
+11/May/2022:15:01:32 +0530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+11/May/2022:15:01:32 +0530 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+11/May/2022:15:01:32 +0530 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+11/May/2022:15:01:32 +0530 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+11/May/2022:15:01:32 +0530 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11/May/2022:15:01:32 +0530 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5181 ms
+11/May/2022:15:01:33 +0530 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11/May/2022:15:01:33 +0530 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+11/May/2022:15:01:33 +0530 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11/May/2022:15:01:33 +0530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11/May/2022:15:01:33 +0530 [restartedMain] WARN  com.zaxxer.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+11/May/2022:15:01:34 +0530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11/May/2022:15:01:34 +0530 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11/May/2022:15:01:35 +0530 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11/May/2022:15:01:35 +0530 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11/May/2022:15:01:36 +0530 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11/May/2022:15:01:36 +0530 [restartedMain] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will not secure any request
+11/May/2022:15:01:37 +0530 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11/May/2022:15:01:37 +0530 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+11/May/2022:15:01:37 +0530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+11/May/2022:15:01:37 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - Started GamerBackendApplication in 10.499 seconds (JVM running for 12.954)
+11/May/2022:15:12:55 +0530 [http-nio-8090-exec-3] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11/May/2022:15:12:55 +0530 [http-nio-8090-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11/May/2022:15:12:55 +0530 [http-nio-8090-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 64 ms
+11/May/2022:15:12:55 +0530 [http-nio-8090-exec-3] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+11/May/2022:15:39:51 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:42:59 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:27 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:29 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:30 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:30 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:31 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:31 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:31 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:32 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:32 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:33 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:34 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:34 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:35 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:35 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:36 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:36 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:36 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:37 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:37 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:38 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:38 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:39 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:39 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:40 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:40 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:41 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:41 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:42 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:42 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:43 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:44 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:15:43:44 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:30:06 +0530 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h31m1s268ms965µs100ns).
+11/May/2022:17:33:20 +0530 [http-nio-8090-exec-9] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:36:26 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:37:17 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:38:09 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:38:51 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:40:42 +0530 [http-nio-8090-exec-1] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:41:17 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:43:07 +0530 [http-nio-8090-exec-7] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:45:19 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:46:20 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:46:56 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:50:00 +0530 [http-nio-8090-exec-7] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:53:52 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:56:25 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:17:59:40 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:05:15 +0530 [http-nio-8090-exec-9] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:05:51 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:08:52 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:27:03 +0530 [http-nio-8090-exec-7] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:31:49 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:31:50 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:35:50 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:35:50 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:37:06 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:37:07 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:18:47:22 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:19:18:13 +0530 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11/May/2022:19:18:13 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11/May/2022:19:18:13 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11/May/2022:20:08:56 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - Starting GamerBackendApplication using Java 17.0.2 on Kaushik with PID 17608 (C:\Users\Kaushik\IdeaProjects\GamerBackend\target\classes started by Kaushik in C:\Users\Kaushik\IdeaProjects\GamerBackend)
+11/May/2022:20:08:56 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+11/May/2022:20:08:56 +0530 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+11/May/2022:20:08:56 +0530 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+11/May/2022:20:08:57 +0530 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11/May/2022:20:08:57 +0530 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 123 ms. Found 4 JPA repository interfaces.
+11/May/2022:20:08:59 +0530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8090 (http)
+11/May/2022:20:08:59 +0530 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8090"]
+11/May/2022:20:08:59 +0530 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+11/May/2022:20:08:59 +0530 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+11/May/2022:20:08:59 +0530 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11/May/2022:20:08:59 +0530 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2684 ms
+11/May/2022:20:08:59 +0530 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11/May/2022:20:08:59 +0530 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+11/May/2022:20:09:00 +0530 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11/May/2022:20:09:00 +0530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11/May/2022:20:09:00 +0530 [restartedMain] WARN  com.zaxxer.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+11/May/2022:20:09:00 +0530 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11/May/2022:20:09:00 +0530 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11/May/2022:20:09:02 +0530 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11/May/2022:20:09:02 +0530 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11/May/2022:20:09:03 +0530 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11/May/2022:20:09:03 +0530 [restartedMain] INFO  org.springframework.security.web.DefaultSecurityFilterChain - Will not secure any request
+11/May/2022:20:09:03 +0530 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11/May/2022:20:09:03 +0530 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8090"]
+11/May/2022:20:09:03 +0530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8090 (http) with context path ''
+11/May/2022:20:09:03 +0530 [restartedMain] INFO  com.example.gamerbackend.GamerBackendApplication - Started GamerBackendApplication in 8.211 seconds (JVM running for 10.302)
+11/May/2022:20:10:11 +0530 [http-nio-8090-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11/May/2022:20:10:11 +0530 [http-nio-8090-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11/May/2022:20:10:11 +0530 [http-nio-8090-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+11/May/2022:20:11:13 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:15 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:16 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:16 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:17 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:17 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:18 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:18 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:19 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:19 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:20 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:20 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:21 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:21 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:22 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:22 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:22 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:23 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:23 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:24 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:24 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:25 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:25 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:25 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:26 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:26 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:27 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:27 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:27 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:28 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:28 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:29 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:53 +0530 [http-nio-8090-exec-9] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:54 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:55 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:56 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:56 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:56 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:11:56 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.CommentsController - [200 OK]
+11/May/2022:20:12:58 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.CommentsController - [200 OK]
+11/May/2022:20:12:58 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:12:59 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:13:00 +0530 [http-nio-8090-exec-7] INFO  com.example.gamerbackend.Controller.CommentsController - [200 OK]
+11/May/2022:20:13:16 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:13:18 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:13:25 +0530 [http-nio-8090-exec-1] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:13:30 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:13:43 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:13:47 +0530 [http-nio-8090-exec-9] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+11/May/2022:20:13:50 +0530 [http-nio-8090-exec-10] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+11/May/2022:20:14:04 +0530 [http-nio-8090-exec-7] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:08 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:13 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:14 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:18 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:19 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:24 +0530 [http-nio-8090-exec-7] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:29 +0530 [http-nio-8090-exec-1] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:32 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:43 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:43 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:44 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:45 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:45 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:14:45 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.CommentsController - [404 NOT_FOUND]
+11/May/2022:20:15:01 +0530 [http-nio-8090-exec-9] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:02 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:03 +0530 [http-nio-8090-exec-7] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:03 +0530 [http-nio-8090-exec-1] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:04 +0530 [http-nio-8090-exec-4] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:04 +0530 [http-nio-8090-exec-5] INFO  com.example.gamerbackend.Controller.CommentsController - [404 NOT_FOUND]
+11/May/2022:20:15:24 +0530 [http-nio-8090-exec-10] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:25 +0530 [http-nio-8090-exec-9] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:26 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:27 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:27 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:27 +0530 [http-nio-8090-exec-8] INFO  com.example.gamerbackend.Controller.CommentsController - [404 NOT_FOUND]
+11/May/2022:20:15:51 +0530 [http-nio-8090-exec-9] INFO  com.example.gamerbackend.Controller.CommentsController - [404 NOT_FOUND]
+11/May/2022:20:15:51 +0530 [http-nio-8090-exec-9] INFO  com.example.gamerbackend.Controller.CommentsController - [200 OK]
+11/May/2022:20:15:51 +0530 [http-nio-8090-exec-9] INFO  com.example.gamerbackend.Controller.CommentsController - [200 OK]
+11/May/2022:20:15:51 +0530 [http-nio-8090-exec-7] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:52 +0530 [http-nio-8090-exec-2] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:15:53 +0530 [http-nio-8090-exec-1] INFO  com.example.gamerbackend.Controller.CommentsController - [200 OK]
+11/May/2022:20:16:39 +0530 [http-nio-8090-exec-3] INFO  com.example.gamerbackend.Controller.GameController - [200 OK]
+11/May/2022:20:16:41 +0530 [http-nio-8090-exec-6] INFO  com.example.gamerbackend.Controller.CommentsController - [200 OK]
+11/May/2022:20:18:46 +0530 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11/May/2022:20:18:46 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11/May/2022:20:18:46 +0530 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
